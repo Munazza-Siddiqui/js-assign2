@@ -122,23 +122,26 @@
 // var pass = prompt("enter your password!");
 // document.write("Entered Password: " + pass);
 // if (pass.length >= '6') {
-//     if (pass.charAt(0) >= '48' && pass.charAt(0) <= '57') {
-//         alert("Password can not be begin with a number!<br>Please enter a valid password!");
+//     if (pass[0] >= '0' && pass[0] <= '9') {
+//         alert("Password can not be begin with a number! \nPlease enter a valid password!");
 //     }
 //     else {
 //         for (var i = 0; i < pass.length; i++) {
-//             if ((pass.charAt(i) >= '48' && pass.charAt(i) <= '57') || (pass.charAt(i) >= '65' && pass.charAt(i) <= '90') || (pass.charAt(i) >= '97' && pass.charAt(i) <= '122')) {
+//             if ((pass[i] >= 'A' && pass[i] <= 'Z') || (pass[i] >= 'a' && pass[i] <= 'z')) {
+//                 document.write("yes");
+//             }
+//              else if(pass[i] >= '0' && pass[i] <= '9') {
+//                 document.write("y");
 //             }
 //             else {
-//                 alert("Enter fdfvalid password!");
+//                 alert("Enter valid password!");
 //                 break;
 //             }
 //         }
 //     }
-//     alert("SUCCESSFUL!");
 // }
 // else {
-//     alert("Enter valid password!");
+//     alert("Password must have atleast 6 characters! \nEnter valid password.");
 // }
 
 
@@ -149,7 +152,7 @@
 // {
 //     document.write(s[i]+"<br>");
 //  }
- 
+
 
 //task 17
 // var a=prompt("enter something!");
@@ -157,14 +160,99 @@
 // var len=a.length;
 // document.write("Last character of input: "+a[len-1]);
 
-//task 18                                        *******
+// task 18                                      
 // var a="The quick brown fox jumps over the lazy dog";
 // document.write("Text: "+a);
-// var count=0;
 // var b= a.toLowerCase();
-// for (var i=0; i<b.length; i++){
-//     if(b.slice(i,3)=="the")
-//    { count++;}
-
-// }
+// var count = (b.match(/the/g)).length;
 // document.write("<br>There are "+count+" occurrence(s) of word 'the'.");
+
+
+
+
+//chapter # 26-30
+//math methods
+
+
+
+//task 1
+// var num=+prompt("enter a positive integer");
+// document.write("number: "+num);
+// var a =num.toFixed();
+// document.write("<br>round off value: "+a);
+// var b= Math.floor(num);
+// document.write("<br>floor value: "+b);
+// var c=Math.ceil(num);
+// document.write("<br>ceil value: "+c);
+
+//task 2
+// var num=+prompt("enter a negative floating point");
+// document.write("number: "+num);
+// var a =num.toFixed();
+// document.write("<br>round off value: "+a);
+// var b= Math.floor(num);
+// document.write("<br>floor value: "+b);
+// var c=Math.ceil(num);
+// document.write("<br>ceil value: "+c);
+
+//task 3
+// var num=+prompt("enter a number");
+// var a=Math.abs(num);
+// document.write("The absolute value of "+num+" is "+a);
+
+//task 4
+// var a=Math.random()*6;
+// var b=Math.ceil(a);
+// document.write("random dice value: "+b);
+
+//task 5
+// var a=Math.random()*2;
+// var b=Math.ceil(a);
+// if(b==2){
+// document.write(+b+"<br>random coin value: Heads");}
+// else{
+//     document.write(+b+"<br>random coin value: Tails"); 
+// }
+
+//task 6
+// var a=Math.random()*100;
+// var b=Math.ceil(a);
+// document.write("random number between 1 and 100: "+b);
+
+
+//task 7
+// var a=prompt("Enter your weight in kilograms");
+// document.write("The weight of user is "+a);
+
+//task 8
+// var a=Math.random()*10;
+// var b=Math.ceil(a);
+// var c=+prompt("enter number between 1 to 10");
+// if(c==b)
+// {
+//     alert("Congratulation!");
+// }
+// else{
+//     alert("try again!");
+// }
+
+
+
+
+
+
+//-------------chapter #31-34
+//date methods
+
+
+
+
+
+//task 1
+// var date=new Date();
+// document.write(date);
+
+//task 2
+var date=new Date();
+var a=date.getMonth;
+document.write(a);
